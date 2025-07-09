@@ -1,0 +1,884 @@
+/* Estilos Generales */
+html {
+    scroll-behavior: smooth; /* Scroll suave general para la página */
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #333; /* Color de texto principal */
+    line-height: 1.7; /* Aumentado ligeramente para mejor legibilidad */
+    background-color: var(--white-color); /* Fondo general blanco */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600; /* Ligeramente más bold por defecto para títulos */
+    color: var(--primary-color); /* Títulos por defecto con color primario */
+}
+
+h1 { font-size: 2.8rem; }
+h2 { font-size: 2.2rem; } /* Ajuste de tamaños base */
+h3 { font-size: 1.8rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+
+
+a {
+    text-decoration: none;
+    color: var(--secondary-color); /* Color de enlace por defecto */
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--primary-color); /* Color de enlace al pasar el mouse */
+}
+
+.container, .container-fluid { /* Aplicar a ambos tipos de container */
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Ajuste para el container estándar */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .container {
+        max-width: 960px;
+    }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .container {
+        max-width: 720px;
+    }
+}
+@media (max-width: 767.98px) {
+    .container {
+        max-width: 100%; /* Ocupar todo el ancho disponible */
+    }
+     h1 { font-size: 2.2rem; } /* Títulos más pequeños en móviles */
+     h2 { font-size: 1.8rem; }
+     h3 { font-size: 1.5rem; }
+}
+
+
+/* Paleta de colores */
+:root {
+    --primary-color: #0A2463; /* Azul oscuro principal */
+    --primary-color-rgb: 10, 36, 99; /* Para usar en rgba() */
+    --secondary-color: #3E92CC; /* Azul más claro (para acentos) */
+    --secondary-color-rgb: 62, 146, 204; /* Para usar en rgba() */
+    --dark-gray: #343a40; /* Gris oscuro */
+    --light-gray: #f8f9fa; /* Gris claro (para fondos) */
+    --white-color: #ffffff;
+    --black-color: #000000;
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--white-color); /* Fondo blanco para la barra de navegación */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra sutil */
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    transition: background-color 0.3s ease-in-out, padding 0.3s ease-in-out;
+}
+
+.navbar.navbar-scrolled {
+    background-color: rgba(255, 255, 255, 0.95); /* Blanco con ligera transparencia al hacer scroll */
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+
+.navbar-brand #logo-placeholder { /* Estilo para el texto del logo si no hay imagen */
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 1.8rem; /* Tamaño del texto del logo */
+    font-family: 'Poppins', sans-serif;
+}
+
+.navbar-brand img#logo {
+    max-height: 50px; /* Ajusta según el tamaño de tu logo real */
+    width: auto;
+    transition: max-height 0.3s ease-in-out;
+}
+
+.navbar.navbar-scrolled .navbar-brand img#logo {
+    max-height: 40px; /* Logo más pequeño al hacer scroll */
+}
+
+.navbar-toggler {
+    border-color: var(--primary-color);
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(10, 36, 99, 0.8)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar-nav .nav-link {
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-left: 15px;
+    margin-right: 15px;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: var(--secondary-color);
+}
+
+/* Botones */
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    padding: 10px 25px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    color: var(--white-color);
+    padding: 10px 25px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-outline-light {
+    border-color: var(--white-color);
+    color: var(--white-color);
+    padding: 10px 25px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+.btn-outline-light:hover {
+    background-color: var(--white-color);
+    color: var(--primary-color);
+    border-color: var(--white-color);
+}
+
+
+/* Hero Section */
+.hero-section {
+    /* Intentaré usar una imagen genérica de tecnología/redes de un CDN para el fondo */
+    /* Si tienes una imagen específica, la reemplazaremos luego */
+    background-image: linear-gradient(rgba(10, 36, 99, 0.75), rgba(10, 36, 99, 0.88)), url('https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed; /* Efecto parallax sutil */
+    min-height: 100vh; /* Ocupa toda la altura de la ventana */
+    color: var(--white-color);
+    padding-top: 140px; /* Espacio para la navbar fija + un poco más */
+    padding-bottom: 80px;
+    display: flex; /* Para centrar contenido verticalmente */
+    align-items: center; /* Para centrar contenido verticalmente */
+}
+
+.hero-section .container {
+    position: relative; /* Para z-index si es necesario */
+    z-index: 2;
+}
+
+.hero-section .hero-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 3rem; /* Ajustado para mejor visualización */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+    margin-bottom: 1rem;
+}
+
+.hero-section .hero-subtitle {
+    font-size: 1.3rem; /* Ajustado */
+    font-weight: 400;
+    line-height: 1.7;
+    max-width: 700px; /* Para que no sea demasiado ancho en pantallas grandes */
+    margin-left: auto;
+    margin-right: auto;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+    margin-bottom: 2rem;
+}
+
+.hero-section .btn-primary,
+.hero-section .btn-outline-light {
+    margin-top: 10px; /* Margen reducido */
+    padding: 12px 30px; /* Botones un poco más grandes */
+    font-size: 1.1rem;
+}
+
+
+/* Estilos para secciones (ejemplo) */
+.section-padding {
+    padding: 80px 0; /* Aumentado el padding general de las secciones */
+}
+
+/* Estilos específicos para la sección "Nosotros" */
+#nosotros .accordion-button {
+    font-weight: 600;
+    color: var(--primary-color);
+    background-color: var(--white-color); /* Fondo claro para el botón del acordeón */
+}
+
+#nosotros .accordion-button:not(.collapsed) {
+    color: var(--secondary-color);
+    background-color: #e7f1ff; /* Un azul muy claro cuando está activo */
+    box-shadow: inset 0 -1px 0 rgba(0,0,0,.125);
+}
+
+#nosotros .accordion-button:focus {
+    box-shadow: 0 0 0 .25rem rgba(var(--primary-color-rgb), .25); /* Usar variable RGB si está definida o color directo */
+}
+
+#nosotros .accordion-button i {
+    transition: transform 0.3s ease;
+}
+
+#nosotros .accordion-button:not(.collapsed) i {
+    transform: rotate(90deg);
+}
+
+#nosotros .accordion-body ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#nosotros .accordion-body ul li {
+    margin-bottom: 0.5rem;
+    position: relative;
+    padding-left: 20px;
+}
+
+#nosotros .accordion-body ul li::before {
+    content: "\f00c"; /* Icono de check de Font Awesome */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: var(--secondary-color);
+    position: absolute;
+    left: 0;
+    top: 2px;
+}
+
+#nosotros img {
+    border: 5px solid var(--white-color); /* Pequeño borde a la imagen */
+}
+
+/* Estilos para la Sección de Servicios */
+#servicios {
+    background-color: var(--white-color); /* Fondo blanco para esta sección */
+}
+
+.service-card {
+    background-color: var(--white-color);
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+.service-icon {
+    font-size: 3rem; /* Tamaño del ícono */
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    line-height: 1; /* Asegura que el ícono no tome demasiado espacio vertical */
+}
+
+.service-title {
+    font-size: 1.5rem;
+    color: var(--dark-gray);
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.service-description {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 20px;
+    flex-grow: 1; /* Hace que la descripción ocupe el espacio disponible */
+}
+
+.service-details-toggle {
+    color: var(--secondary-color);
+    font-weight: 600;
+    text-decoration: none;
+    padding: 0; /* Quitar padding extra de btn-link */
+}
+
+.service-details-toggle:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+.service-details-toggle i {
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover .service-details-toggle i {
+    transform: translateX(5px);
+}
+
+/* Estilos para los Modales de Servicio */
+.modal-header {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border-bottom: none; /* Quitar borde inferior del header del modal */
+}
+
+.modal-header .btn-close {
+    filter: invert(1) grayscale(100%) brightness(200%); /* Para que la X sea blanca */
+}
+
+.modal-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+.modal-body ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.modal-body ul li {
+    padding-left: 25px;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.modal-body ul li::before {
+    content: "\f138"; /* Icono de flecha derecha de Font Awesome */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: var(--secondary-color);
+    position: absolute;
+    left: 0;
+    top: 2px;
+}
+
+.modal-footer {
+    border-top: 1px solid #dee2e6; /* Borde superior del footer del modal */
+}
+
+/* Estilos para la Sección Portafolio */
+#portafolio {
+    background-color: var(--light-gray); /* Fondo gris claro para esta sección */
+}
+
+.portfolio-item {
+    margin-bottom: 30px;
+}
+
+.portfolio-wrap {
+    transition: 0.3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    background: rgba(var(--primary-color-rgb), 0.6); /* Usar --primary-color con opacidad */
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.portfolio-wrap::before {
+    content: "";
+    background: rgba(10, 36, 99, 0.65); /* --primary-color con opacidad */
+    position: absolute;
+    left: 30px;
+    right: 30px;
+    top: 30px;
+    bottom: 30px;
+    transition: 0.3s;
+    z-index: 2;
+    opacity: 0;
+    border-radius: 6px;
+}
+
+.portfolio-wrap img {
+    transition: 0.3s;
+    width: 100%; /* Asegurar que la imagen ocupe todo el contenedor */
+    height: auto; /* Mantener la proporción */
+    display: block; /* Eliminar espacio extra debajo de la imagen */
+}
+
+.portfolio-info {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    z-index: 3;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.portfolio-info::before { /* Efecto de superposición más oscuro para el texto */
+    content: "";
+    background: rgba(0,0,0,0.3);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1; /* Detrás del texto pero encima de la imagen */
+    opacity: 0;
+    transition: opacity 0.3s;
+    border-radius: 6px; /* Coincidir con el borde de portfolio-wrap::before si es visible */
+}
+
+
+.portfolio-info h4 {
+    font-size: 1.3rem;
+    color: var(--white-color);
+    font-weight: 600;
+    margin-bottom: 5px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.portfolio-info p {
+    color: #f0f0f0; /* Un blanco un poco más apagado */
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.4);
+}
+
+.portfolio-links a {
+    color: var(--white-color);
+    margin: 0 5px; /* Aumentado el margen */
+    font-size: 1.5rem; /* Íconos más grandes */
+    display: inline-block;
+    transition: 0.3s;
+    line-height: 1;
+    padding: 8px; /* Añadido padding para hacer el área clickeable más grande */
+    background-color: rgba(var(--secondary-color-rgb), 0.7); /* Usar --secondary-color con opacidad */
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.portfolio-links a:hover {
+    color: var(--primary-color);
+    background-color: var(--white-color);
+}
+
+.portfolio-wrap:hover::before {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 1;
+}
+
+.portfolio-wrap:hover .portfolio-info {
+    opacity: 1;
+}
+
+.portfolio-wrap:hover .portfolio-info::before {
+    opacity: 1; /* Hacer visible la capa oscura para el texto */
+}
+
+
+.portfolio-wrap:hover img {
+    transform: scale(1.1);
+}
+
+/* GLightbox styles */
+.glightbox-clean .gslide-description {
+    background: rgba(10, 36, 99, 0.85) !important; /* Fondo del pie de foto con color primario y opacidad */
+}
+.glightbox-clean .gdesc-inner {
+    padding: 15px !important;
+}
+.glightbox-clean .gslide-title {
+    color: var(--white-color) !important;
+    font-family: 'Poppins', sans-serif !important;
+    font-weight: 600 !important;
+    font-size: 1.1rem !important;
+}
+.glightbox-clean .gslide-desc {
+    color: #f0f0f0 !important; /* Un blanco un poco más apagado para la descripción */
+    font-size: 0.9rem !important;
+}
+
+/* Estilos para la Sección de Contacto */
+#contacto {
+    background-color: var(--white-color); /* Fondo blanco */
+}
+
+.contact-info-box,
+.contact-form-box {
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    background-color: var(--white-color); /* Asegurar fondo blanco si la sección tiene otro color */
+}
+
+.contact-info-box h3, .contact-form-box h3 {
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.info-item .info-icon {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    width: 40px; /* Ancho fijo para alinear el texto */
+}
+
+.info-item h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: var(--dark-gray);
+}
+
+.info-item p {
+    font-size: 0.95rem;
+    margin-bottom: 0;
+    color: #555;
+}
+
+.info-item p a {
+    color: var(--secondary-color);
+    transition: color 0.3s ease;
+}
+
+.info-item p a:hover {
+    color: var(--primary-color);
+}
+
+.map-responsive {
+    overflow: hidden;
+    padding-bottom: 75%; /* Aspect ratio 4:3, ajustar si es necesario */
+    position: relative;
+    height: 0;
+    border-radius: 6px;
+    margin-top: 20px; /* Espacio antes del mapa */
+}
+
+.map-responsive iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    border-radius: 6px; /* Bordes redondeados para el iframe */
+}
+
+/* Formulario de contacto */
+.php-email-form .form-control {
+    border-radius: 6px;
+    font-size: 0.95rem;
+}
+
+.php-email-form .form-control:focus {
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 0.2rem rgba(var(--secondary-color-rgb), 0.25);
+}
+
+.php-email-form label {
+    font-weight: 500;
+    color: var(--dark-gray);
+    margin-bottom: 0.3rem; /* Espacio menor debajo de la etiqueta */
+}
+
+.php-email-form .loading,
+.php-email-form .error-message,
+.php-email-form .sent-message {
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    font-weight: 500;
+}
+
+.php-email-form .loading {
+    background: var(--light-gray);
+    border: 1px solid #e0e0e0;
+}
+
+.php-email-form .error-message {
+    background: #fdecea;
+    border: 1px solid #f8c9c9;
+    color: #a94442;
+}
+
+.php-email-form .sent-message {
+    background: #e6ffed;
+    border: 1px solid #c3e6cb;
+    color: #155724;
+}
+
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px; /* Aumentado el margen inferior */
+    padding-bottom: 20px; /* Añadido padding inferior */
+    position: relative;
+    color: var(--primary-color);
+    font-size: 2.5rem; /* Mantenido, se ajusta en media query para móviles */
+    font-weight: 700;
+    text-transform: uppercase; /* Títulos de sección en mayúsculas */
+    letter-spacing: 1px; /* Ligero espaciado */
+}
+
+.section-title::before { /* Línea superior decorativa */
+    content: '';
+    position: absolute;
+    display: block;
+    width: 120px;
+    height: 1px;
+    background: #ddd;
+    bottom: 1px;
+    left: calc(50% - 60px);
+}
+
+.section-title::after { /* Línea inferior más gruesa y colorida */
+    content: '';
+    position: absolute;
+    display: block;
+    width: 60px; /* Más corta que la superior */
+    height: 3px; /* Más gruesa */
+    background: var(--secondary-color); /* Color secundario */
+    bottom: 0;
+    left: calc(50% - 30px);
+}
+
+/* Estilo para el section-title en fondos oscuros */
+.section-padding[style*="var(--secondary-color)"] .section-title::before,
+.section-padding[style*="var(--primary-color)"] .section-title::before {
+    background: rgba(255,255,255,0.3); /* Línea decorativa más clara */
+}
+
+.section-padding[style*="var(--secondary-color)"] .section-title::after,
+.section-padding[style*="var(--primary-color)"] .section-title::after {
+    background: var(--white-color); /* Línea decorativa blanca */
+}
+
+
+/* Estilo para el lead text debajo del section-title */
+.section-padding .lead { /* Aplicar solo a .lead dentro de .section-padding */
+    color: #555;
+    font-size: 1.1rem;
+    max-width: 700px; /* Centrar y limitar ancho del lead text */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Animaciones ligeras */
+/* Fade in para elementos al hacer scroll (se necesitaría JS para añadir la clase 'visible') */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* Footer */
+.footer { /* Cambiado de 'footer' a '.footer' para que coincida con el HTML */
+    background-color: var(--primary-color); /* Fondo azul oscuro principal */
+    color: var(--light-gray);
+    font-size: 0.9rem;
+    padding-top: 60px; /* Aumentado el padding superior */
+    padding-bottom: 30px;
+}
+
+.footer .footer-info .logo span {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--white-color);
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 1px;
+}
+.footer .footer-info p {
+    font-size: 0.9rem;
+    color: #e0e0e0; /* Un gris más claro para el párrafo */
+    margin-top: 10px;
+    line-height: 1.7;
+}
+
+.footer .social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Borde sutil */
+    font-size: 1rem; /* Tamaño de ícono ajustado */
+    color: rgba(255, 255, 255, 0.8); /* Iconos un poco transparentes */
+    margin-right: 10px;
+    transition: 0.3s;
+}
+
+.footer .social-links a:hover {
+    color: var(--white-color);
+    border-color: var(--white-color);
+    background-color: var(--secondary-color); /* Fondo azul claro al pasar el mouse */
+}
+
+.footer h4 { /* Títulos de las columnas del footer */
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--white-color);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+}
+/* Línea decorativa debajo de los títulos h4 del footer */
+.footer h4::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 40px;
+    height: 2px;
+    background: var(--secondary-color); /* Azul claro */
+    bottom: 0;
+    left: 0;
+}
+.footer .footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer .footer-links ul li {
+    padding: 8px 0; /* Espaciado entre items */
+    display: flex;
+    align-items: center;
+}
+
+.footer .footer-links ul li i { /* Estilo para los íconos de flecha */
+    padding-right: 8px;
+    color: var(--secondary-color); /* Azul claro */
+    font-size: 0.8rem;
+    line-height: 0;
+}
+
+.footer .footer-links ul a {
+    color: rgba(255, 255, 255, 0.8); /* Enlaces un poco transparentes */
+    transition: 0.3s;
+    display: inline-block;
+    line-height: 1;
+    text-decoration: none;
+}
+
+.footer .footer-links ul a:hover {
+    color: var(--white-color);
+    text-decoration: none; /* No subrayar, pero se podría añadir si se prefiere */
+}
+
+.footer .footer-contact p {
+    line-height: 1.8;
+    color: #e0e0e0; /* Un gris más claro para el texto de contacto */
+}
+
+.footer .copyright {
+    text-align: center;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15); /* Borde más sutil */
+    font-size: 0.85rem;
+    color: #c0c0c0; /* Gris aún más claro para copyright */
+}
+
+.footer .credits {
+    padding-top: 5px;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #a0a0a0; /* Gris muy claro para créditos */
+}
+
+.footer .credits a {
+    color: var(--secondary-color); /* Azul claro para el enlace de créditos */
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.footer .credits a:hover {
+    color: var(--white-color);
+}
+
+
+/* Botón Flotante WhatsApp */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25d366; /* Color oficial de WhatsApp */
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.whatsapp-float:hover {
+    color: #FFF;
+    background-color: #128C7E; /* Un verde más oscuro para el hover */
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+    .navbar-nav {
+        text-align: center;
+    }
+    .navbar-nav .nav-link {
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .section-title {
+        font-size: 2rem;
+    }
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        right: 20px;
+        font-size: 24px;
+    }
+}

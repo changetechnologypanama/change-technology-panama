@@ -4,366 +4,696 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Change Technology Panama - Soluciones Tecnológicas</title>
-    <meta name="description" content="Soluciones tecnológicas profesionales en Panamá. Soporte técnico, reparación de equipos, cámaras de seguridad, cableado estructurado y automatización del hogar.">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+    <meta name="description" content="Change Technology Panama: Expertos en instalación de CCTV, cableado estructurado, soporte técnico, reparación de computadoras, redes y automatización en Panamá. ¡Tu tecnología en manos confiables!">
+    <meta name="keywords" content="Change Technology Panama, CCTV Panamá, cableado estructurado Panamá, soporte técnico Panamá, reparación computadoras Panamá, instalación redes Panamá, automatización Panamá, NVR, DVR, mantenimiento cámaras, soporte IT">
+    <meta name="author" content="Change Technology Panama">
+    <link rel="canonical" href="https://www.changetechnologypanama.com/"> <!-- Asumir esta como la URL final, cambiar si es otra -->
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.changetechnologypanama.com/"> <!-- URL final -->
+    <meta property="og:title" content="Change Technology Panama - Soluciones Tecnológicas Confiables">
+    <meta property="og:description" content="Servicios expertos en CCTV, redes, soporte técnico y más en toda Panamá. Calidad y atención personalizada.">
+    <meta property="og:image" content="https://www.changetechnologypanama.com/images/og-image.png"> <!-- Crear y subir una imagen OG -->
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.changetechnologypanama.com/"> <!-- URL final -->
+    <meta property="twitter:title" content="Change Technology Panama - Soluciones Tecnológicas Confiables">
+    <meta property="twitter:description" content="Servicios expertos en CCTV, redes, soporte técnico y más en toda Panamá. Calidad y atención personalizada.">
+    <meta property="twitter:image" content="https://www.changetechnologypanama.com/images/og-image.png"> <!-- Usar la misma imagen OG -->
+
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome (para iconos) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts (Poppins, Open Sans) -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- GLightbox CSS (para la galería del portafolio) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Favicon (usaremos el logo) -->
+    <link rel="icon" href="images/logo.png" type="image/png">
 </head>
 <body>
-    <!-- Fixed Navigation -->
-    <header>
-        <nav class="navbar" id="navbar">
-            <div class="container">
-                <div class="nav-brand">
-                    <img src="https://i.ibb.co/W4Mhn2Qm/changetechnologypanama-gmail-com.jpg" alt="Change Technology Panama Logo" class="logo-img">
-                    <span class="logo-text">Change Technology Panama</span>
-                </div>
-                <ul class="nav-links" id="nav-links">
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#servicios">Servicios</a></li>
-                    <li><a href="#nosotros">Nosotros</a></li>
-                    <li><a href="#galeria">Galería</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <!-- <img src="images/logo.png" alt="Change Technology Panama Logo" id="logo"> -->
+                <span id="logo-placeholder" style="color: var(--primary-color); font-weight: bold; font-size: 1.5rem;">ChangeTech</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#inicio">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#nosotros">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#servicios">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#portafolio">Portafolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacto">Contacto</a>
+                    </li>
                 </ul>
-                <div class="hamburger" id="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    <!-- Banner Section -->
-    <section id="inicio" class="banner">
-        <div class="banner-overlay"></div>
-        <div class="banner-content">
-            <h1 class="banner-title">Soluciones Tecnológicas a tu Alcance</h1>
-            <p class="banner-subtitle">Innovación, calidad y eficiencia para tu empresa y hogar</p>
-            <div class="banner-buttons">
-                <a href="#servicios" class="btn btn-primary">Nuestros Servicios</a>
-                <a href="#contacto" class="btn btn-secondary">Contáctanos</a>
             </div>
         </div>
-        <div class="scroll-indicator">
-            <i class="fas fa-chevron-down"></i>
-        </div>
-    </section>
+    </nav>
 
-    <!-- Servicios Section -->
-    <section id="servicios" class="services">
-        <div class="container">
-            <div class="section-header">
-                <h2>Nuestros Servicios</h2>
-                <p>Ofrecemos soluciones tecnológicas integrales para empresas y hogares</p>
-            </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-headset"></i>
+    <!-- Contenido de la página irá aquí -->
+    <main>
+        <!-- Hero Section -->
+        <section id="inicio" class="hero-section d-flex align-items-center">
+            <div class="container text-center">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <h1 class="hero-title display-4 fw-bold">¡Tu Tecnología en Manos Confiables!</h1>
+                        <p class="hero-subtitle lead my-4">En Change Technology Panama, transformamos tus necesidades tecnológicas en realidades eficientes y seguras. Ofrecemos servicio en toda Panamá.</p>
+                        <a href="#contacto" class="btn btn-primary btn-lg">Contáctanos Ahora</a>
+                        <a href="#servicios" class="btn btn-outline-light btn-lg ms-md-3 mt-3 mt-md-0">Nuestros Servicios</a>
                     </div>
-                    <h3>Soporte Técnico</h3>
-                    <p>Asistencia técnica especializada para resolver problemas informáticos y mantener tus sistemas funcionando óptimamente.</p>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-tools"></i>
-                    </div>
-                    <h3>Reparación y Mantenimiento</h3>
-                    <p>Reparación profesional de PCs, laptops, impresoras y otros equipos tecnológicos con garantía de calidad.</p>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-video"></i>
-                    </div>
-                    <h3>Cámaras de Seguridad</h3>
-                    <p>Instalación de sistemas CCTV, cámaras IP, Wi-Fi y análogas para la seguridad de tu empresa o hogar.</p>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-network-wired"></i>
-                    </div>
-                    <h3>Cableado Estructurado</h3>
-                    <p>Diseño e instalación de infraestructura de red con cableado estructurado para máximo rendimiento.</p>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-wifi"></i>
-                    </div>
-                    <h3>Redes e Instalación</h3>
-                    <p>Configuración de routers, switches, puntos de acceso Wi-Fi e IoT para conectividad óptima.</p>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-home"></i>
-                    </div>
-                    <h3>Automatización del Hogar</h3>
-                    <p>Instalación de interruptores inteligentes, integración con Alexa y sistemas de domótica moderna.</p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+        <!-- Fin Hero Section -->
 
-    <!-- Nosotros Section -->
-    <section id="nosotros" class="about">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <div class="section-header">
-                        <h2>Sobre Nosotros</h2>
-                        <p>Expertos en tecnología comprometidos con la excelencia</p>
+        <!-- Nosotros Section -->
+        <section id="nosotros" class="section-padding bg-light">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll">Sobre Nosotros</h2>
+                <div class="row align-items-center">
+                    <div class="col-lg-6 mb-4 mb-lg-0 animate-on-scroll" data-animation-delay="100">
+                        <img src="https://via.placeholder.com/500x350/0A2463/FFFFFF?text=Change+Tech+Equipo" alt="Equipo de Change Technology Panama" class="img-fluid rounded shadow" loading="lazy">
+                        <!-- Reemplazar con una imagen real del equipo o de la empresa -->
                     </div>
-                    <div class="about-description">
-                        <p>En <strong>Change Technology Panama</strong>, somos una empresa especializada en brindar soluciones tecnológicas integrales para empresas y hogares. Con años de experiencia en el sector, nuestro equipo de profesionales altamente capacitados se dedica a ofrecer servicios de la más alta calidad.</p>
-                        
-                        <p>Nos especializamos en soporte técnico, reparación de equipos, instalación de sistemas de seguridad, cableado estructurado, configuración de redes y automatización del hogar. Nuestro compromiso es proporcionar soluciones innovadoras que mejoren la eficiencia y productividad de nuestros clientes.</p>
-                        
-                        <div class="about-features">
-                            <div class="feature">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Técnicos certificados y experimentados</span>
+                    <div class="col-lg-6 animate-on-scroll" data-animation-delay="200">
+                        <h3 class="mb-3" style="color: var(--primary-color);">Nuestra Trayectoria</h3>
+                        <p>En <strong>Change Technology Panama</strong>, comenzamos nuestra andadura con la firme convicción de que la tecnología puede y debe ser accesible y eficiente para todos. Desde nuestros inicios en la Ciudad de Panamá, nos hemos dedicado a ofrecer soluciones tecnológicas innovadoras y un servicio técnico de primera calidad, adaptándonos a las crecientes necesidades de personas, hogares y empresas.</p>
+                        <p>Nos enorgullece haber construido una reputación basada en la confianza, la rapidez y la efectividad de nuestro trabajo.</p>
+
+                        <div class="accordion mt-4" id="accordionNosotros">
+                            <div class="accordion-item animate-on-scroll" data-animation-delay="300">
+                                <h2 class="accordion-header" id="headingMision">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMision" aria-expanded="false" aria-controls="collapseMision">
+                                        <i class="fas fa-bullseye me-2 text-primary"></i> Nuestra Misión
+                                    </button>
+                                </h2>
+                                <div id="collapseMision" class="accordion-collapse collapse" aria-labelledby="headingMision" data-bs-parent="#accordionNosotros">
+                                    <div class="accordion-body">
+                                        Brindar soluciones tecnológicas integrales, confiables y personalizadas en el área de soporte técnico, redes, cableado estructurado, CCTV, mantenimiento de equipos e instalación de software, garantizando la eficiencia y seguridad operativa de nuestros clientes en Panamá, con un servicio ágil, honesto y de calidad.
+                                    </div>
+                                </div>
                             </div>
-                            <div class="feature">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Atención personalizada 24/7</span>
+                            <div class="accordion-item animate-on-scroll" data-animation-delay="400">
+                                <h2 class="accordion-header" id="headingVision">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseVision" aria-expanded="false" aria-controls="collapseVision">
+                                        <i class="fas fa-eye me-2 text-primary"></i> Nuestra Visión
+                                    </button>
+                                </h2>
+                                <div id="collapseVision" class="accordion-collapse collapse" aria-labelledby="headingVision" data-bs-parent="#accordionNosotros">
+                                    <div class="accordion-body">
+                                        Ser reconocidos como una empresa líder e innovadora en servicios tecnológicos en Panamá, destacándonos por nuestra excelencia técnica, compromiso con el cliente y capacidad para adaptarnos a las nuevas tendencias del sector, contribuyendo al desarrollo digital de empresas y hogares.
+                                    </div>
+                                </div>
                             </div>
-                            <div class="feature">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Garantía en todos nuestros servicios</span>
-                            </div>
-                            <div class="feature">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Tecnología de vanguardia</span>
+                            <div class="accordion-item animate-on-scroll" data-animation-delay="500"> <!-- Mantengo Valores o lo cambio por los puntos clave? Por ahora mantengo. -->
+                                <h2 class="accordion-header" id="headingValores">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseValores" aria-expanded="false" aria-controls="collapseValores">
+                                        <i class="fas fa-gem me-2 text-primary"></i> Nuestros Valores
+                                    </button>
+                                </h2>
+                                <div id="collapseValores" class="accordion-collapse collapse" aria-labelledby="headingValores" data-bs-parent="#accordionNosotros">
+                                    <div class="accordion-body">
+                                        <ul>
+                                            <li><strong>Calidad:</strong> Compromiso con la excelencia en cada servicio y solución.</li>
+                                            <li><strong>Innovación:</strong> Búsqueda constante de nuevas tecnologías y métodos.</li>
+                                            <li><strong>Integridad:</strong> Actuamos con honestidad y transparencia.</li>
+                                            <li><strong>Orientación al Cliente:</strong> Sus necesidades son nuestra prioridad.</li>
+                                            <li><strong>Responsabilidad:</strong> Asumimos nuestros compromisos con seriedad.</li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+                        <p class="mt-4"><strong>Nuestro enfoque principal es la satisfacción del cliente.</strong> Creemos en construir relaciones a largo plazo basadas en la confianza y la calidad superior de nuestro servicio. Cada proyecto, grande o pequeño, es una oportunidad para demostrar nuestro compromiso.</p>
                     </div>
                 </div>
-                <div class="about-image">
-                    <img src="https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Equipo de trabajo tecnológico">
-                </div>
             </div>
-        </div>
-    </section>
+        </section>
+        <!-- Fin Nosotros Section -->
 
-    <!-- Galería Section -->
-    <section id="galeria" class="gallery">
-        <div class="container">
-            <div class="section-header">
-                <h2>Galería de Proyectos</h2>
-                <p>Algunos de nuestros trabajos realizados</p>
+        <!-- Servicios Section -->
+        <section id="servicios" class="section-padding">
+            <div class="container">
+                <h2 class="section-title">Nuestros Servicios</h2>
+                <p class="text-center lead mb-5">Ofrecemos una amplia gama de soluciones tecnológicas para satisfacer todas tus necesidades. Descubre cómo podemos ayudarte.</p>
+                <div class="row g-4">
+                    <!-- Servicio 1: Soluciones CCTV y Seguridad -->
+                    <div class="col-md-6 col-lg-4 animate-on-scroll">
+                        <div class="service-card h-100">
+                            <div class="service-icon">
+                                <i class="fas fa-video"></i> <!-- Icono de cámara -->
+                            </div>
+                            <h4 class="service-title">Soluciones CCTV y Seguridad</h4>
+                            <p class="service-description">Instalación, mantenimiento y configuración de sistemas de cámaras CCTV (NVR/DVR) para una vigilancia eficaz.</p>
+                            <button class="btn btn-link service-details-toggle" data-bs-toggle="modal" data-bs-target="#serviceModalCCTV">Leer más <i class="fas fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                    <!-- Servicio 2: Redes y Conectividad -->
+                    <div class="col-md-6 col-lg-4 animate-on-scroll" data-animation-delay="100">
+                        <div class="service-card h-100">
+                            <div class="service-icon">
+                                <i class="fas fa-network-wired"></i> <!-- Icono de redes -->
+                            </div>
+                            <h4 class="service-title">Redes y Conectividad</h4>
+                            <p class="service-description">Instalación, mantenimiento de redes y cableado estructurado residencial y comercial.</p>
+                             <button class="btn btn-link service-details-toggle" data-bs-toggle="modal" data-bs-target="#serviceModalRedes">Leer más <i class="fas fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                    <!-- Servicio 3: Soporte y Reparación de Equipos -->
+                    <div class="col-md-6 col-lg-4 animate-on-scroll" data-animation-delay="200">
+                        <div class="service-card h-100">
+                            <div class="service-icon">
+                                <i class="fas fa-laptop-medical"></i> <!-- Icono de laptop con herramientas -->
+                            </div>
+                            <h4 class="service-title">Soporte y Reparación de Equipos</h4>
+                            <p class="service-description">Diagnóstico, reparación de computadoras/laptops y mantenimiento general de equipos tecnológicos.</p>
+                            <button class="btn btn-link service-details-toggle" data-bs-toggle="modal" data-bs-target="#serviceModalSoporteEquipos">Leer más <i class="fas fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                    <!-- Servicio 4: Software y Sistemas -->
+                    <div class="col-md-6 col-lg-4 animate-on-scroll" data-animation-delay="300">
+                        <div class="service-card h-100">
+                            <div class="service-icon">
+                                <i class="fas fa-cogs"></i> <!-- Icono de engranajes/configuración -->
+                            </div>
+                            <h4 class="service-title">Software y Sistemas</h4>
+                            <p class="service-description">Instalación, actualización de software y configuración de sistemas de respaldo y seguridad.</p>
+                            <button class="btn btn-link service-details-toggle" data-bs-toggle="modal" data-bs-target="#serviceModalSoftware">Leer más <i class="fas fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                    <!-- Servicio 5: Soporte TI Especializado -->
+                    <div class="col-md-6 col-lg-4 animate-on-scroll" data-animation-delay="400">
+                        <div class="service-card h-100">
+                            <div class="service-icon">
+                                <i class="fas fa-headset"></i> <!-- Icono de soporte/auriculares -->
+                            </div>
+                            <h4 class="service-title">Soporte TI Especializado</h4>
+                            <p class="service-description">Asistencia técnica IT remota y presencial adaptada a tus necesidades.</p>
+                            <button class="btn btn-link service-details-toggle" data-bs-toggle="modal" data-bs-target="#serviceModalSoporteTI">Leer más <i class="fas fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                    <!-- Servicio 6: Nuestra Garantía de Servicio -->
+                    <div class="col-md-6 col-lg-4 animate-on-scroll" data-animation-delay="500">
+                        <div class="service-card h-100">
+                            <div class="service-icon">
+                                <i class="fas fa-shield-alt"></i> <!-- Icono de escudo/garantía -->
+                            </div>
+                            <h4 class="service-title">Nuestra Garantía de Servicio</h4>
+                            <p class="service-description">Trabajo garantizado, atención rápida y personalizada, con equipos probados y configurados al momento.</p>
+                            <button class="btn btn-link service-details-toggle" data-bs-toggle="modal" data-bs-target="#serviceModalGarantia">Leer más <i class="fas fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <img src="https://images.pexels.com/photos/442150/pexels-photo-442150.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Instalación de cámaras de seguridad">
-                    <div class="gallery-overlay">
-                        <h4>Sistema de Cámaras CCTV</h4>
-                        <p>Instalación completa de seguridad</p>
-                    </div>
-                </div>
-                
-                <div class="gallery-item">
-                    <img src="https://images.pexels.com/photos/159304/network-cable-ethernet-computer-159304.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Cableado estructurado">
-                    <div class="gallery-overlay">
-                        <h4>Cableado Estructurado</h4>
-                        <p>Red empresarial de alta velocidad</p>
-                    </div>
-                </div>
-                
-                <div class="gallery-item">
-                    <img src="https://images.pexels.com/photos/325229/pexels-photo-325229.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Reparación de computadoras">
-                    <div class="gallery-overlay">
-                        <h4>Reparación de Equipos</h4>
-                        <p>Mantenimiento especializado</p>
-                    </div>
-                </div>
-                
-                <div class="gallery-item">
-                    <img src="https://images.pexels.com/photos/4792728/pexels-photo-4792728.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Automatización del hogar">
-                    <div class="gallery-overlay">
-                        <h4>Casa Inteligente</h4>
-                        <p>Automatización residencial</p>
-                    </div>
-                </div>
-                
-                <div class="gallery-item">
-                    <img src="https://images.pexels.com/photos/1181354/pexels-photo-1181354.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Configuración de redes">
-                    <div class="gallery-overlay">
-                        <h4>Configuración de Redes</h4>
-                        <p>Infraestructura Wi-Fi empresarial</p>
-                    </div>
-                </div>
-                
-                <div class="gallery-item">
-                    <img src="https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Soporte técnico">
-                    <div class="gallery-overlay">
-                        <h4>Soporte Técnico</h4>
-                        <p>Asistencia especializada</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
+        <!-- Fin Servicios Section -->
 
-    <!-- Contacto Section -->
-    <section id="contacto" class="contact">
-        <div class="container">
-            <div class="section-header">
-                <h2>Contáctanos</h2>
-                <p>Estamos aquí para ayudarte con tus necesidades tecnológicas</p>
-            </div>
-            <div class="contact-content">
-                <div class="contact-form-container">
-                    <form id="contactForm" class="contact-form">
-                        <div class="form-group">
-                            <label for="nombre">Nombre Completo</label>
-                            <input type="text" id="nombre" name="nombre" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="correo">Correo Electrónico</label>
-                            <input type="email" id="correo" name="correo" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="telefono">Teléfono</label>
-                            <input type="tel" id="telefono" name="telefono">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="servicio">Servicio de Interés</label>
-                            <select id="servicio" name="servicio">
-                                <option value="">Selecciona un servicio</option>
-                                <option value="soporte">Soporte Técnico</option>
-                                <option value="reparacion">Reparación y Mantenimiento</option>
-                                <option value="camaras">Cámaras de Seguridad</option>
-                                <option value="cableado">Cableado Estructurado</option>
-                                <option value="redes">Redes e Instalación</option>
-                                <option value="automatizacion">Automatización del Hogar</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="mensaje">Mensaje</label>
-                            <textarea id="mensaje" name="mensaje" rows="5" required placeholder="Describe tu proyecto o necesidad..."></textarea>
-                        </div>
-                        
-                        <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
-                    </form>
-                </div>
-                
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h4>Teléfono</h4>
-                            <p>+507 6123-4567</p>
-                        </div>
+        <!-- Modales para Servicios (Actualizados) -->
+        <!-- Modal Soluciones CCTV y Seguridad -->
+        <div class="modal fade" id="serviceModalCCTV" tabindex="-1" aria-labelledby="serviceModalCCTVLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="serviceModalCCTVLabel"><i class="fas fa-video me-2 text-primary"></i>Soluciones CCTV y Seguridad</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fab fa-whatsapp"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h4>WhatsApp</h4>
-                            <p>+507 6987-6543</p>
-                        </div>
+                    <div class="modal-body">
+                        <p>Protege tu hogar o negocio con nuestros sistemas de videovigilancia avanzados y servicios de mantenimiento:</p>
+                        <ul>
+                            <li><strong>Instalación de Sistemas de Cámaras CCTV:</strong> Desplegamos cámaras de alta definición (IP, Wi-Fi, análogas) adaptadas a tus necesidades específicas de seguridad.</li>
+                            <li><strong>Mantenimiento Preventivo y Correctivo de Cámaras:</strong> Aseguramos el funcionamiento óptimo de tus cámaras con revisiones periódicas, limpieza y reparación de fallos.</li>
+                            <li><strong>Configuración y Ajuste de Grabadores (NVR/DVR):</strong> Optimizamos tus grabadores para un almacenamiento eficiente, acceso remoto seguro y alertas personalizadas.</li>
+                            <li>Asesoramiento experto para la selección de equipos y diseño de la cobertura de vigilancia.</li>
+                        </ul>
+                        <img src="https://via.placeholder.com/700x300/EEEEEE/0A2463?text=Sistemas+CCTV" class="img-fluid rounded mt-3" alt="Instalación profesional de cámaras CCTV y sistemas de seguridad" loading="lazy">
                     </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h4>Email</h4>
-                            <p>changetechnologypanama@gmail.com</p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h4>Ubicación</h4>
-                            <p>Ciudad de Panamá, Panamá</p>
-                        </div>
-                    </div>
-                    
-                    <div class="social-media">
-                        <h4>Síguenos</h4>
-                        <div class="social-links">
-                            <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
-                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                            <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                        </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <a href="#contacto" class="btn btn-primary">Cotizar Sistema CCTV</a>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+
+        <!-- Modal Redes y Conectividad -->
+        <div class="modal fade" id="serviceModalRedes" tabindex="-1" aria-labelledby="serviceModalRedesLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="serviceModalRedesLabel"><i class="fas fa-network-wired me-2 text-primary"></i>Redes y Conectividad</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Creamos y mantenemos infraestructuras de red robustas y eficientes para una conectividad sin interrupciones:</p>
+                        <ul>
+                            <li><strong>Instalación y Mantenimiento de Redes:</strong> Diseño, implementación y mantenimiento de redes LAN y Wi-Fi para hogares y empresas, asegurando cobertura y rendimiento.</li>
+                            <li><strong>Cableado Estructurado (Residencial y Comercial):</strong> Instalación profesional de cableado para datos, voz y video, siguiendo estándares de calidad para garantizar escalabilidad y organización.</li>
+                            <li>Configuración de routers, switches, puntos de acceso y firewalls.</li>
+                            <li>Diagnóstico y solución de problemas de conectividad.</li>
+                        </ul>
+                        <img src="https://via.placeholder.com/700x300/EEEEEE/0A2463?text=Redes+y+Cableado" class="img-fluid rounded mt-3" alt="Servicios de instalación de redes y cableado estructurado en Panamá" loading="lazy">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <a href="#contacto" class="btn btn-primary">Consultar Proyecto de Red</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Soporte y Reparación de Equipos -->
+        <div class="modal fade" id="serviceModalSoporteEquipos" tabindex="-1" aria-labelledby="serviceModalSoporteEquiposLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="serviceModalSoporteEquiposLabel"><i class="fas fa-laptop-medical me-2 text-primary"></i>Soporte y Reparación de Equipos</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Mantenemos tus dispositivos en óptimas condiciones y extendemos su vida útil:</p>
+                        <ul>
+                            <li><strong>Diagnóstico y Reparación de Computadoras y Laptops:</strong> Solución a problemas de hardware (pantallas, teclados, discos duros) y software (virus, lentitud, errores de sistema).</li>
+                            <li><strong>Mantenimiento General de Equipos Tecnológicos:</strong> Limpieza interna, optimización de rendimiento y actualizaciones para PCs, laptops, impresoras y otros periféricos.</li>
+                            <li>Reemplazo de componentes y asesoría para upgrades.</li>
+                        </ul>
+                        <img src="https://via.placeholder.com/700x300/EEEEEE/0A2463?text=Reparacion+Computadoras" class="img-fluid rounded mt-3" alt="Soporte técnico y reparación de computadoras y laptops" loading="lazy">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <a href="#contacto" class="btn btn-primary">Solicitar Soporte Técnico</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Software y Sistemas -->
+        <div class="modal fade" id="serviceModalSoftware" tabindex="-1" aria-labelledby="serviceModalSoftwareLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="serviceModalSoftwareLabel"><i class="fas fa-cogs me-2 text-primary"></i>Software y Sistemas</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Aseguramos que tu entorno digital sea funcional, seguro y esté al día:</p>
+                        <ul>
+                            <li><strong>Instalación y Actualización de Software:</strong> Instalamos y configuramos sistemas operativos, aplicaciones de productividad, herramientas de diseño, antivirus y más.</li>
+                            <li><strong>Configuración de Sistemas de Respaldo y Seguridad:</strong> Implementamos soluciones de backup para proteger tu información valiosa y configuramos medidas de seguridad para prevenir amenazas.</li>
+                            <li>Asesoría en licenciamiento de software y optimización de sistemas.</li>
+                        </ul>
+                        <img src="https://via.placeholder.com/700x300/EEEEEE/0A2463?text=Software+y+Seguridad" class="img-fluid rounded mt-3" alt="Instalación de software y configuración de sistemas de seguridad" loading="lazy">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <a href="#contacto" class="btn btn-primary">Consultar Servicios de Software</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Soporte TI Especializado -->
+        <div class="modal fade" id="serviceModalSoporteTI" tabindex="-1" aria-labelledby="serviceModalSoporteTILabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="serviceModalSoporteTILabel"><i class="fas fa-headset me-2 text-primary"></i>Soporte TI Especializado</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Tu aliado tecnológico para resolver cualquier incidencia y optimizar tu infraestructura:</p>
+                        <ul>
+                            <li><strong>Soporte IT Remoto y Presencial:</strong> Asistencia técnica rápida y eficiente, ya sea conectándonos a tus equipos de forma remota o visitando tus instalaciones.</li>
+                            <li>Planes de soporte adaptados a las necesidades de particulares y empresas.</li>
+                            <li>Resolución de problemas complejos, consultoría tecnológica y acompañamiento en proyectos.</li>
+                        </ul>
+                        <img src="https://via.placeholder.com/700x300/EEEEEE/0A2463?text=Soporte+IT" class="img-fluid rounded mt-3" alt="Soporte IT especializado remoto y presencial en Panamá" loading="lazy">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <a href="#contacto" class="btn btn-primary">Contactar Soporte IT</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Nuestra Garantía de Servicio -->
+        <div class="modal fade" id="serviceModalGarantia" tabindex="-1" aria-labelledby="serviceModalGarantiaLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="serviceModalGarantiaLabel"><i class="fas fa-shield-alt me-2 text-primary"></i>Nuestra Garantía de Servicio</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>En Change Technology Panama, nos comprometemos con la excelencia y tu total satisfacción:</p>
+                        <ul>
+                            <li><strong>✅ Trabajo Garantizado:</strong> Respaldamos la calidad de cada instalación y reparación que realizamos.</li>
+                            <li><strong>✅ Atención Rápida y Personalizada:</strong> Entendemos tus urgencias y te ofrecemos soluciones a medida con un trato cercano.</li>
+                            <li><strong>✅ Equipos con Prueba y Configuración al Momento:</strong> Nos aseguramos de que todo funcione perfectamente antes de finalizar nuestro servicio, explicándote su uso.</li>
+                            <li>Compromiso con la honestidad, transparencia y el uso de componentes de calidad.</li>
+                        </ul>
+                        <img src="https://via.placeholder.com/700x300/EEEEEE/0A2463?text=Servicio+Garantizado" class="img-fluid rounded mt-3" alt="Garantía de servicio Change Technology Panama" loading="lazy">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <a href="#contacto" class="btn btn-primary">Conocer Más</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Fin Modales para Servicios -->
+
+        <!-- Puntos Destacados Section -->
+        <section id="destacados" class="section-padding" style="background-color: var(--secondary-color);">
+            <div class="container text-center">
+                <h2 class="section-title" style="color: var(--white-color);">¿Por Qué Elegirnos?</h2>
+                <div class="row g-4 justify-content-center">
+                    <div class="col-md-4 animate-on-scroll">
+                        <div class="destacado-item p-4 bg-light rounded shadow-sm">
+                            <div class="destacado-icon mb-3">
+                                <i class="fas fa-check-circle fa-3x" style="color: var(--primary-color);"></i>
+                            </div>
+                            <h4 class="h5" style="color: var(--primary-color); font-weight: 700;">Trabajo Garantizado</h4>
+                            <p class="mb-0">Respaldamos la calidad de cada instalación y reparación que realizamos.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 animate-on-scroll" data-animation-delay="100">
+                        <div class="destacado-item p-4 bg-light rounded shadow-sm">
+                            <div class="destacado-icon mb-3">
+                                <i class="fas fa-bolt fa-3x" style="color: var(--primary-color);"></i>
+                            </div>
+                            <h4 class="h5" style="color: var(--primary-color); font-weight: 700;">Atención Rápida y Personalizada</h4>
+                            <p class="mb-0">Entendemos tus urgencias y te ofrecemos soluciones a medida.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 animate-on-scroll" data-animation-delay="200">
+                        <div class="destacado-item p-4 bg-light rounded shadow-sm">
+                            <div class="destacado-icon mb-3">
+                                <i class="fas fa-cogs fa-3x" style="color: var(--primary-color);"></i>
+                            </div>
+                            <h4 class="h5" style="color: var(--primary-color); font-weight: 700;">Equipos con Prueba y Configuración</h4>
+                            <p class="mb-0">Nos aseguramos que todo funcione perfectamente antes de irnos.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Fin Puntos Destacados Section -->
+
+        <!-- Portafolio Section -->
+        <section id="portafolio" class="section-padding bg-light">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll">Nuestro Portafolio</h2>
+                <p class="text-center lead mb-5 animate-on-scroll" data-animation-delay="100">Explora algunos de nuestros proyectos y trabajos realizados. Calidad y profesionalismo en cada instalación.</p>
+                
+                <div class="row g-4 portfolio-grid">
+                    <!-- Item 1: Instalación CCTV -->
+                    <div class="col-md-6 col-lg-4 portfolio-item filter-cctv animate-on-scroll" data-animation-delay="200">
+                        <div class="portfolio-wrap">
+                            <img src="https://via.placeholder.com/600x400/0A2463/FFFFFF?text=Instalacion+CCTV" class="img-fluid" alt="Instalación de cámaras CCTV en residencia" loading="lazy">
+                            <div class="portfolio-info">
+                                <h4>Instalación CCTV Residencial</h4>
+                                <p>Sistema de cámaras IP</p>
+                                <div class="portfolio-links">
+                                    <a href="https://via.placeholder.com/1200x800/0A2463/FFFFFF?text=Instalacion+CCTV+Detalle" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Instalación CCTV Residencial"><i class="fas fa-plus"></i></a>
+                                    <!-- <a href="#" title="Más Detalles"><i class="fas fa-link"></i></a> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 2: Cableado Estructurado Oficina -->
+                    <div class="col-md-6 col-lg-4 portfolio-item filter-cableado animate-on-scroll" data-animation-delay="300">
+                        <div class="portfolio-wrap">
+                            <img src="https://via.placeholder.com/600x400/3E92CC/FFFFFF?text=Cableado+Oficina" class="img-fluid" alt="Proyecto de cableado estructurado en oficina corporativa" loading="lazy">
+                            <div class="portfolio-info">
+                                <h4>Cableado Estructurado</h4>
+                                <p>Oficina Corporativa</p>
+                                <div class="portfolio-links">
+                                    <a href="https://via.placeholder.com/1200x800/3E92CC/FFFFFF?text=Cableado+Oficina+Detalle" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Cableado Estructurado Oficina"><i class="fas fa-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 3: Automatización Hogar -->
+                    <div class="col-md-6 col-lg-4 portfolio-item filter-automatizacion animate-on-scroll" data-animation-delay="400">
+                        <div class="portfolio-wrap">
+                            <img src="https://via.placeholder.com/600x400/1E5091/FFFFFF?text=Domotica+Hogar" class="img-fluid" alt="Sistema de domótica para control de iluminación en hogar" loading="lazy">
+                            <div class="portfolio-info">
+                                <h4>Automatización de Hogar</h4>
+                                <p>Control Inteligente de Iluminación</p>
+                                <div class="portfolio-links">
+                                    <a href="https://via.placeholder.com/1200x800/1E5091/FFFFFF?text=Domotica+Hogar+Detalle" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Automatización de Hogar"><i class="fas fa-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 4: Mantenimiento Equipos Empresa -->
+                     <div class="col-md-6 col-lg-4 portfolio-item filter-soporte animate-on-scroll" data-animation-delay="200">
+                        <div class="portfolio-wrap">
+                            <img src="https://via.placeholder.com/600x400/0A2463/FFFFFF?text=Mantenimiento+PCs" class="img-fluid" alt="Mantenimiento preventivo de equipos de cómputo para empresa" loading="lazy">
+                            <div class="portfolio-info">
+                                <h4>Mantenimiento Preventivo</h4>
+                                <p>Equipos de Cómputo Empresariales</p>
+                                <div class="portfolio-links">
+                                    <a href="https://via.placeholder.com/1200x800/0A2463/FFFFFF?text=Mantenimiento+PCs+Detalle" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Mantenimiento PCs Empresa"><i class="fas fa-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 5: Instalación Red WiFi Extensa -->
+                    <div class="col-md-6 col-lg-4 portfolio-item filter-redes animate-on-scroll" data-animation-delay="300">
+                        <div class="portfolio-wrap">
+                            <img src="https://via.placeholder.com/600x400/3E92CC/FFFFFF?text=Red+WiFi+Cobertura" class="img-fluid" alt="Instalación de red WiFi de alta cobertura en centro educativo" loading="lazy">
+                            <div class="portfolio-info">
+                                <h4>Red Wi-Fi de Alta Cobertura</h4>
+                                <p>Centro Educativo</p>
+                                <div class="portfolio-links">
+                                    <a href="https://via.placeholder.com/1200x800/3E92CC/FFFFFF?text=Red+WiFi+Cobertura+Detalle" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Instalación Red WiFi"><i class="fas fa-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 6: Seguridad Perimetral Negocio -->
+                    <div class="col-md-6 col-lg-4 portfolio-item filter-cctv filter-redes animate-on-scroll" data-animation-delay="400">
+                        <div class="portfolio-wrap">
+                            <img src="https://via.placeholder.com/600x400/1E5091/FFFFFF?text=Seguridad+Negocio" class="img-fluid" alt="Sistema de seguridad integral para negocio con CCTV y control de acceso" loading="lazy">
+                            <div class="portfolio-info">
+                                <h4>Seguridad Integral</h4>
+                                <p>CCTV y Control de Acceso para Negocio</p>
+                                <div class="portfolio-links">
+                                    <a href="https://via.placeholder.com/1200x800/1E5091/FFFFFF?text=Seguridad+Negocio+Detalle" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Seguridad Perimetral Negocio"><i class="fas fa-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-center mt-4"><em>Nota: Las imágenes son representativas. Serán reemplazadas por fotos de proyectos reales.</em></p>
+            </div>
+        </section>
+        <!-- Fin Portafolio Section -->
+
+        <!-- Contacto Section -->
+        <section id="contacto" class="section-padding">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll">Ponte en Contacto</h2>
+                <p class="text-center lead mb-5 animate-on-scroll" data-animation-delay="100">¿Tienes alguna pregunta o necesitas una cotización? Estamos aquí para ayudarte. Completa el formulario o utiliza nuestros datos de contacto directo.</p>
+
+                <div class="row">
+                    <!-- Información de Contacto -->
+                    <div class="col-lg-5 mb-4 mb-lg-0 animate-on-scroll" data-animation-delay="200">
+                        <div class="contact-info-box h-100">
+                            <h3 class="mb-4" style="color: var(--primary-color);">Información de Contacto</h3>
+                            <div class="info-item d-flex align-items-start mb-3">
+                                <div class="info-icon me-3">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div>
+                                    <h4>Ubicación:</h4>
+                                     <p>Ciudad de Panamá, Panamá.<br><strong>Servicio en toda Panamá.</strong></p>
+                                </div>
+                            </div>
+                            <div class="info-item d-flex align-items-start mb-3">
+                                <div class="info-icon me-3">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h4>Correo Electrónico:</h4>
+                                    <p><a href="mailto:info@changetechnologypanama.com">info@changetechnologypanama.com</a></p>
+                                </div>
+                            </div>
+                            <div class="info-item d-flex align-items-start mb-3">
+                                <div class="info-icon me-3">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                                <div>
+                                    <h4>Teléfono:</h4>
+                                    <p><a href="tel:+50766881553">+507 6688-1553</a></p>
+                                </div>
+                            </div>
+                            <div class="info-item d-flex align-items-start">
+                                <div class="info-icon me-3">
+                                    <i class="fab fa-whatsapp"></i>
+                                </div>
+                                <div>
+                                    <h4>WhatsApp:</h4>
+                                    <p><a href="https://wa.me/50766881553" target="_blank">+507 6688-1553</a></p>
+                                </div>
+                            </div>
+                            <hr>
+                            <p class="mt-3"><strong>Cotiza por WhatsApp o mensaje directo.</strong></p>
+                            <h4 class="mt-4 mb-3" style="color: var(--primary-color);">Mapa de Ubicación (Referencial)</h4>
+                            <!-- Mapa de Google Embed -->
+                            <div class="map-responsive">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d252230.0002207146!2d-79.62999307343748!3d8.993590399999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fab555e0f932179%3A0x11695c28cb59421d!2sPanama%20City%2C%20Panama!5e0!3m2!1sen!2sus!4v1678886パンタナama" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Formulario de Contacto -->
+                    <div class="col-lg-7 animate-on-scroll" data-animation-delay="300">
+                        <div class="contact-form-box h-100">
+                            <h3 class="mb-4" style="color: var(--primary-color);">Envíanos un Mensaje</h3>
+                            <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" class="php-email-form">
+                                <!-- Reemplazar YOUR_FORMSPREE_ID con tu ID real de Formspree -->
+                                <div class="row">
+                                    <div class="col-md-6 form-group mb-3">
+                                        <label for="name" class="form-label">Nombre Completo</label>
+                                        <input type="text" name="name" class="form-control" id="name" required>
+                                    </div>
+                                    <div class="col-md-6 form-group mb-3">
+                                        <label for="email" class="form-label">Correo Electrónico</label>
+                                        <input type="email" class="form-control" name="email" id="email" required>
+                                    </div>
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label for="subject" class="form-label">Asunto</label>
+                                    <input type="text" class="form-control" name="subject" id="subject" required>
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label for="message" class="form-label">Mensaje</label>
+                                    <textarea class="form-control" name="message" rows="6" id="message" required></textarea>
+                                </div>
+                                <div class="my-3">
+                                    <div class="loading" style="display: none;">Cargando...</div>
+                                    <div class="error-message" style="display: none; color: red;"></div>
+                                    <div class="sent-message" style="display: none; color: green;">Tu mensaje ha sido enviado. ¡Gracias!</div>
+                                </div>
+                                <div class="text-center">
+                                    <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Fin Contacto Section -->
+
+        <!-- Botón Flotante de WhatsApp -->
+        <a href="https://wa.me/50766881553?text=Hola%2C%20estoy%20interesado%20en%20sus%20servicios." class="whatsapp-float" target="_blank" title="Contactar por WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+
+    </main>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer id="footer" class="footer section-padding">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <div class="footer-logo">
-                        <img src="https://i.ibb.co/W4Mhn2Qm/changetechnologypanama-gmail-com.jpg" alt="Change Technology Panama">
-                        <span>Change Technology Panama</span>
+            <div class="row gy-4">
+                <div class="col-lg-5 col-md-12 footer-info">
+                    <a href="index.html" class="logo d-flex align-items-center mb-3">
+                        <!-- <img src="images/logo.png" alt="Change Technology Panama"> -->
+                        <span style="font-size: 1.8rem; font-weight: bold; color: var(--white-color);">Change Technology Panama</span>
+                    </a>
+                    <p>Soluciones tecnológicas integrales en Panamá. Desde instalaciones de seguridad hasta soporte técnico y automatización. Tu aliado tecnológico de confianza.</p>
+                    <div class="social-links d-flex mt-4">
+                        <a href="#" class="twitter" title="Twitter/X"><i class="fab fa-twitter"></i></a> <!-- Placeholder -->
+                        <a href="#" class="facebook" title="Facebook"><i class="fab fa-facebook-f"></i></a> <!-- Placeholder -->
+                        <a href="https://www.instagram.com/changetechnologypa/" target="_blank" class="instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/50766881553" target="_blank" class="whatsapp" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
                     </div>
-                    <p>Soluciones tecnológicas profesionales para empresas y hogares en Panamá.</p>
                 </div>
-                
-                <div class="footer-section">
-                    <h4>Servicios</h4>
+
+                <div class="col-lg-2 col-6 footer-links">
+                    <h4>Enlaces Útiles</h4>
                     <ul>
-                        <li><a href="#servicios">Soporte Técnico</a></li>
-                        <li><a href="#servicios">Reparación de Equipos</a></li>
-                        <li><a href="#servicios">Cámaras de Seguridad</a></li>
-                        <li><a href="#servicios">Cableado Estructurado</a></li>
+                        <li><i class="fas fa-chevron-right"></i> <a href="#inicio">Inicio</a></li>
+                        <li><i class="fas fa-chevron-right"></i> <a href="#nosotros">Nosotros</a></li>
+                        <li><i class="fas fa-chevron-right"></i> <a href="#servicios">Servicios</a></li>
+                        <li><i class="fas fa-chevron-right"></i> <a href="#portafolio">Portafolio</a></li>
+                        <li><i class="fas fa-chevron-right"></i> <a href="#contacto">Contacto</a></li>
                     </ul>
                 </div>
-                
-                <div class="footer-section">
-                    <h4>Contacto</h4>
+
+                <div class="col-lg-2 col-6 footer-links">
+                    <h4>Nuestros Servicios</h4>
                     <ul>
-                        <li><i class="fas fa-phone"></i> +507 6123-4567</li>
-                        <li><i class="fas fa-envelope"></i> changetechnologypanama@gmail.com</li>
-                        <li><i class="fas fa-map-marker-alt"></i> Ciudad de Panamá</li>
+                        <li><i class="fas fa-chevron-right"></i> <a href="#" data-bs-toggle="modal" data-bs-target="#serviceModalCCTV">Soluciones CCTV</a></li>
+                        <li><i class="fas fa-chevron-right"></i> <a href="#" data-bs-toggle="modal" data-bs-target="#serviceModalRedes">Redes y Cableado</a></li>
+                        <li><i class="fas fa-chevron-right"></i> <a href="#" data-bs-toggle="modal" data-bs-target="#serviceModalSoporteEquipos">Soporte Equipos</a></li>
+                        <li><i class="fas fa-chevron-right"></i> <a href="#" data-bs-toggle="modal" data-bs-target="#serviceModalSoftware">Software y Sistemas</a></li>
+                        <li><i class="fas fa-chevron-right"></i> <a href="#" data-bs-toggle="modal" data-bs-target="#serviceModalSoporteTI">Soporte TI</a></li>
                     </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+                    <h4>Contáctanos</h4>
+                    <p>
+                        Ciudad de Panamá <br>
+                        Panamá<br>
+                        Servicio en toda Panamá<br><br>
+                        <strong>Teléfono:</strong> <a href="tel:+50766881553" style="color: var(--light-gray);">+507 6688-1553</a><br>
+                        <strong>Correo:</strong> <a href="mailto:info@changetechnologypanama.com" style="color: var(--light-gray);">info@changetechnologypanama.com</a><br>
+                    </p>
                 </div>
             </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; 2024 Change Technology Panama. Todos los derechos reservados.</p>
+        </div>
+
+        <div class="container mt-4">
+            <div class="copyright">
+                &copy; Copyright <strong><span>Change Technology Panama</span></strong>. Todos los Derechos Reservados
+            </div>
+            <div class="credits">
+                Diseñado por <a href="https://jules-ai.com/" target="_blank" style="color: var(--secondary-color);">Jules AI Agent</a> <!-- Opcional, puedes quitarlo o cambiarlo -->
             </div>
         </div>
     </footer>
+    <!-- Fin Footer -->
 
-    <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/50769876543?text=Hola,%20me%20interesa%20conocer%20más%20sobre%20sus%20servicios%20tecnológicos" class="whatsapp-float" target="_blank" title="Contáctanos por WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-    </a>
 
-    <!-- JavaScript -->
-    <script src="assets/js/script.js"></script>
+    <!-- Bootstrap JS Bundle (Popper.js y Bootstrap JS) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- GLightbox JS -->
+    <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
 </body>
 </html>
